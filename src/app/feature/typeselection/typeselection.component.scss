@@ -1,0 +1,42 @@
+.tag-selection-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      color: #333;
+    }
+  
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+  
+    .tag {
+      padding: 0.6rem 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+  
+      &:hover {
+        background-color: #ececec;
+      }
+  
+      &.selected {
+        background-color: #007aff;
+        color: #fff;
+        border-color: #007aff;
+      }
+    }
+  }
+  

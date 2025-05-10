@@ -1,0 +1,12 @@
+<div class="tag-selection-container">
+    <h2>Select your interests</h2>
+    <div class="tags">
+        <button class="tag" *ngFor="let tag of tags | keyvalue; let i = index"
+        [class.selected]="isSelected[i]"
+        (click)="selectTag(i)">
+        {{ tag }}
+        </button>
+    </div>
+</div>
+
+<button class="submit-button" (click)="submitSelection()" [disabled]="isSelected.includes(true)">Proceed</button>

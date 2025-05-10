@@ -1,0 +1,188 @@
+:host {
+    display: block;
+  }
+  
+  // Light and Dark Themes
+  $light-bg: #f2f4f7;
+  $dark-bg: #121212;
+  $light-box-bg: white;
+  $dark-box-bg: #1e1e1e;
+  $light-text: #333;
+  $dark-text: #f1f1f1;
+  $primary: #3f51b5;
+  
+  .sso-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+    background: $light-bg;
+  
+    .dark-mode & {
+      background: $dark-bg;
+    }
+  }
+  
+  .sso-box {
+    background: $light-box-bg;
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: $light-text;
+  
+    .dark-mode & {
+      background: $dark-box-bg;
+      color: $dark-text;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+    }
+  
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      color: #666;
+  
+      .dark-mode & {
+        color: #aaa;
+      }
+    }
+  
+    form {
+      .form-group {
+        margin-bottom: 1rem;
+        text-align: left;
+  
+        label {
+          display: block;
+          margin-bottom: 0.4rem;
+          font-size: 0.85rem;
+          font-weight: 500;
+        }
+  
+        input {
+          width: 100%;
+          padding: 0.6rem;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          font-size: 0.95rem;
+          background: white;
+          color: black;
+  
+          &:focus {
+            outline: none;
+            border-color: $primary;
+          }
+  
+          .dark-mode & {
+            background: #2c2c2c;
+            border: 1px solid #555;
+            color: #eee;
+          }
+        }
+      }
+  
+      .login-btn {
+        width: 100%;
+        background: $primary;
+        color: white;
+        border: none;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+  
+        &:hover {
+          background: darken($primary, 10%);
+        }
+      }
+  
+      .divider {
+        margin: 1.5rem 0;
+        position: relative;
+        text-align: center;
+        color: #aaa;
+        font-size: 0.85rem;
+  
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          width: 45%;
+          height: 1px;
+          background: #ccc;
+  
+          .dark-mode & {
+            background: #555;
+          }
+        }
+  
+        &::before {
+          left: 0;
+        }
+  
+        &::after {
+          right: 0;
+        }
+      }
+  
+      .sso-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+  
+        button {
+          padding: 0.6rem;
+          font-size: 0.95rem;
+          border-radius: 4px;
+          border: none;
+          cursor: pointer;
+  
+          &.sso-google {
+            background: #db4437;
+            color: white;
+  
+            &:hover {
+              background: #c33d2f;
+            }
+          }
+  
+          &.sso-github {
+            background: #24292e;
+            color: white;
+  
+            &:hover {
+              background: #1b1f23;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Responsive Design
+  @media (max-width: 480px) {
+    .sso-box {
+      padding: 1.5rem 1rem;
+  
+      form {
+        .form-group input {
+          font-size: 0.85rem;
+        }
+  
+        .login-btn {
+          font-size: 0.9rem;
+        }
+  
+        .sso-buttons button {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  

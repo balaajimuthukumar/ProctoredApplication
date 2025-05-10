@@ -1,0 +1,46 @@
+.settings-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    padding: 16px;
+    margin: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+    
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+  
+    .card-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .card-text {
+      .card-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+        color: #222222;
+      }
+  
+      .card-description {
+        font-size: 14px;
+        color: #666666;
+        margin: 4px 0 0 0;
+      }
+    }
+  
+    .card-icon {
+      font-size: 24px;
+      color: #999999;
+      display: flex;
+      align-items: center;
+  
+      .arrow {
+        font-family: sans-serif;
+      }
+    }
+  }
+  

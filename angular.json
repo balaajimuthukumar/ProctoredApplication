@@ -57,6 +57,21 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "local": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ],
+              "optimization": false,
+              "sourceMap": true,
+              "extractCss": true,
+              "namedChunks": true,
+              "aot": false,
+              "vendorChunk": true,
+              "buildOptimizer": false
             }
           },
           "defaultConfiguration": "production"
@@ -69,6 +84,9 @@
             },
             "development": {
               "browserTarget": "ProctoredApplication:build:development"
+            },
+            "local": {
+              "browserTarget": "ProctoredApplication:build:local"
             }
           },
           "defaultConfiguration": "development"
